@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Counter from './components/Counter/Counter.jsx';
+import CounterCopy from './components/CounterCopy/CounterCopy.jsx';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <div style={{
+      display: 'flex',
+      gap: '5rem'
+    }}>
+      <Counter />
+      <Counter />
+      <CounterCopy />
+      <CounterCopy />
+    </div>
+
   </React.StrictMode>
 );
 
