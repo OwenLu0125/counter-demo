@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Counter from './components/Counter/Counter.jsx';
-import CounterCopy from './components/CounterCopy/CounterCopy.jsx';
 
+const key = [1, 2, 3, 4]
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,10 +15,13 @@ root.render(
       display: 'flex',
       gap: '5rem'
     }}>
-      <Counter />
-      <Counter />
-      <CounterCopy />
-      <CounterCopy />
+      {key.map((index) => (
+        <Counter key={`counter-${index}`} />
+      ))}
+
+      {/* {console.log(key.map((index) => (
+        <Counter key={`counter-${index}`} />
+      )))} */}
     </div>
 
   </React.StrictMode>

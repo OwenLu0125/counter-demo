@@ -2,14 +2,20 @@ import React from 'react';
 import './Counter.css';
 
 const shadow = {
-  boxShadow: '0 0 10px 10px #C0E7DF',
+  boxShadow: 'rgb(234 182 69) 0px 0px 10px 10px',
   padding: 20,
+  gap: '1rem',
+  // display: 'flex',
+  // alignItems: 'center',
+  // flexdirection: 'row',
+  // backgroundColor: '#0ab5b5',
+  // borderRadius: '15px',
 };
 
 const Counter = () => {
   return (
     <div className='container' style={shadow}>
-      <div className='chevron chevron-up' />
+      <div className='chevron chevron-down' />
       <div
         className='number'
         style={{
@@ -18,7 +24,7 @@ const Counter = () => {
         }}>
         0
       </div>
-      <div className='chevron chevron-down' />
+      <div className='chevron chevron-up' />
     </div>
   );
 };
