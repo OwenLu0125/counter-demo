@@ -1,26 +1,23 @@
 import React from 'react';
 import './CounterCopy.css';
 
-const shadow = {
-  boxShadow: '0 0 10px 10px #f26072',
-  padding: 20,
+const containerStyle = {
+  backgroundColor: '#4c00ff',
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'row',
+  borderRadius: '15px',
+  padding: '15px',
 };
 
-const Counter = () => {
+function CounterCopy() {
   return (
-    <div className='container' style={shadow}>
-      <div className='chevron chevron-up' />
-      <div
-        className='number'
-        style={{
-          color: '#FFE8E8',
-          textShadow: '2px 2px #434a54',
-        }}>
-        0
-      </div>
-      <div className='chevron chevron-down' />
+    <div className='container' style={containerStyle}>
+      <div className='chevron chevron-down'></div>
+      <div className='number'>128</div>
+      <div className='chevron chevron-up'></div>
     </div>
   );
-};
+}
 
-export default Counter;
+export default CounterCopy;

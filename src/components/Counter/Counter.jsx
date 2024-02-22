@@ -1,32 +1,29 @@
+import { useState } from 'react';
 import React from 'react';
 import './Counter.css';
 
-const shadow = {
-  boxShadow: 'rgb(234 182 69) 0px 0px 10px 10px',
-  padding: 20,
-  gap: '1rem',
-  // display: 'flex',
-  // alignItems: 'center',
-  // flexdirection: 'row',
-  // backgroundColor: '#0ab5b5',
-  // borderRadius: '15px',
+const containerStyle = {
+  backgroundColor: '#0AB5B5',
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'row',
+  borderRadius: '15px',
+  padding: '15px',
 };
 
-const Counter = () => {
+function Counter() {
+  const [count, setCount] = useState(128);
   return (
-    <div className='container' style={shadow}>
-      <div className='chevron chevron-down' />
+    <div className='container' style={containerStyle}>
       <div
-        className='number'
-        style={{
-          color: '#FFE8E8',
-          textShadow: '2px 2px #434a54',
-        }}>
-        0
-      </div>
-      <div className='chevron chevron-up' />
+        className='chevron chevron-down'
+        onClick={() => setCount(count + 1)}></div>
+      <div className='number'>{count}</div>
+      <div
+        className='chevron chevron-up'
+        onClick={() => setCount(count + 1)}></div>
     </div>
   );
-};
+}
 
 export default Counter;
