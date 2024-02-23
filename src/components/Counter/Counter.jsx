@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import React from 'react';
+import { useState } from 'react';
 import './Counter.css';
 
 const containerStyle = {
@@ -13,15 +13,19 @@ const containerStyle = {
 
 function Counter() {
   const [count, setCount] = useState(128);
+
+  const handleIncrease = () => {
+    setCount(count - 1);
+  };
+  const handleDecrease = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div className='container' style={containerStyle}>
-      <div
-        className='chevron chevron-down'
-        onClick={() => setCount(count + 1)}></div>
+      <div className='chevron chevron-down' onClick={handleIncrease}></div>
       <div className='number'>{count}</div>
-      <div
-        className='chevron chevron-up'
-        onClick={() => setCount(count + 1)}></div>
+      <div className='chevron chevron-up' onClick={handleDecrease}></div>
     </div>
   );
 }
